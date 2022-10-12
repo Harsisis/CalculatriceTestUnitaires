@@ -18,6 +18,9 @@ namespace CalculatriceTestUnitaires {
         }
 
         public int Division(int number1, int number2) {
+            if (number2 == 0) {
+                throw new DivideByZeroException("Division par Zero impossible");
+            }
             return number1 / number2;
         }
 

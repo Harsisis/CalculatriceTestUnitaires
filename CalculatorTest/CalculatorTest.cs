@@ -39,5 +39,11 @@ namespace CalculatriceTestUnitaires {
         public void DivideTwoElements_ShouldReturnRightResult(int firstNumber, int secondNumber, int result) {
             Assert.AreEqual(calculator.Division(firstNumber, secondNumber), result);
         }
+
+        [TestMethod]
+        [DataRow(10, 0)]
+        public void DivideByZero_ShouldReturnException(int firstNumber, int secondNumber) {
+            Assert.ThrowsException<DivideByZeroException>(() => calculator.Division(firstNumber, secondNumber));
+        }
     }
 }
