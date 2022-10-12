@@ -30,5 +30,14 @@ namespace CalculatriceTestUnitaires {
         public void Calculator_Multiplication() {
             Assert.AreEqual(number1 * number2, calculator.Multiplication(number1, number2));
         }
+
+        [TestMethod]
+        [DataRow(10, 20, 0)]
+        [DataRow(10, 2, 5)]
+        [DataRow(100, 20, 5)]
+        [DataRow(5, 5, 1)]
+        public void DivideTwoElements_ShouldReturnRightResult(int firstNumber, int secondNumber, int result) {
+            Assert.AreEqual(calculator.Division(firstNumber, secondNumber), result);
+        }
     }
 }
