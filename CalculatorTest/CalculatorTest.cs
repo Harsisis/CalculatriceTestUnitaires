@@ -1,4 +1,6 @@
-namespace CalculatriceTestUnitaires {
+using CalculatriceTestUnitaires;
+
+namespace CalculatriceTest {
     [TestClass]
     public class CalculatorTest {
 
